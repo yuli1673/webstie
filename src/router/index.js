@@ -1,14 +1,30 @@
+/*
+ * @Author: yu li
+ * @Date: 2021-12-09 22:30:52
+ * @LastEditTime: 2021-12-09 23:51:45
+ * @LastEditors: yu li
+ * @FilePath: /official-website/src/router/index.js
+ * @Description: 路由
+ * @ReadMe: 产考资料，学习文献等...
+ */
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Home from "../views/Home.vue";
+import layout from "@/layout";
 
 Vue.use(VueRouter);
 
 const routes = [
   {
     path: "/",
-    name: "Home",
-    component: Home,
+    component: layout,
+    redirect: "/home",
+    children: [
+      {
+        path: "home",
+        name: "Home",
+        component: () => import("../views/Home/index"),
+      },
+    ],
   },
   {
     path: "/about",
