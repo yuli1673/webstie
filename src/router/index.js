@@ -1,7 +1,7 @@
 /*
  * @Author: yu li
  * @Date: 2021-12-09 22:30:52
- * @LastEditTime: 2021-12-09 23:51:45
+ * @LastEditTime: 2021-12-10 22:47:11
  * @LastEditors: yu li
  * @FilePath: /official-website/src/router/index.js
  * @Description: 路由
@@ -22,19 +22,29 @@ const routes = [
       {
         path: "home",
         name: "Home",
-        component: () => import("../views/Home/index"),
+        component: () => import("@/views/Home/index"),
       },
     ],
   },
   {
     path: "/about",
-    name: "About",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/About.vue"),
+    component: layout,
+    redirect: "/about/index",
+    children: [
+      {
+        path: "index",
+        name: "about",
+        component: () => import("@/views/About"),
+      },
+    ],
   },
+  // 404
+  {
+    path: "/404",
+    name: "404",
+    component: () => import("@/views/404/index.vue"),
+  },
+  { path: "*", redirect: "/404" },
 ];
 
 const router = new VueRouter({
