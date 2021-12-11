@@ -1,7 +1,7 @@
 <!--
  * @Author: yu li
  * @Date: 2021-12-10 22:25:52
- * @LastEditTime: 2021-12-11 18:50:50
+ * @LastEditTime: 2021-12-11 19:43:13
  * @LastEditors: yu li
  * @FilePath: /website/src/components/TheNav/NavItem.vue
  * @Description: 路由子集
@@ -66,6 +66,7 @@ export default {
   },
   data() {
     return {
+      // https://github.com/PanJiaChen/vue-admin-template/issues/237
       onlyOneChild: null
     }
   },

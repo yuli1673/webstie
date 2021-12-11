@@ -1,7 +1,7 @@
 /*
  * @Author: yu li
  * @Date: 2021-12-09 22:30:52
- * @LastEditTime: 2021-12-11 18:42:10
+ * @LastEditTime: 2021-12-11 19:46:36
  * @LastEditors: yu li
  * @FilePath: /website/src/router/index.js
  * @Description: 路由
@@ -60,7 +60,7 @@ const routes = [
       {
         path: 'index',
         name: 'information',
-        meta: { title: '资讯信息', icon: 'el-icon-s-home' },
+        meta: { title: '资讯信息', icon: 'el-icon-data-analysis' },
         component: () => import('@/views/Information/index')
       }
     ]
@@ -68,23 +68,23 @@ const routes = [
   {
     path: '/about',
     component: layout,
-    meta: { title: '关于我们', icon: 'el-icon-s-home' },
+    meta: { title: '关于我们', icon: 'el-icon-s-promotion' },
     redirect: '/about/index',
     children: [
       {
         path: 'index',
         name: 'about',
-        meta: { title: '关于我们', icon: 'el-icon-s-home' },
+        meta: { title: '关于我们' },
         component: () => import('@/views/About')
       },
       {
         path: 'a',
-        meta: { title: '资讯信息', icon: 'el-icon-s-home' },
+        meta: { title: '资讯信息' },
         component: () => import('@/views/aaa')
       },
       {
         path: 'a2',
-        meta: { title: '资讯信息', icon: 'el-icon-s-home' },
+        meta: { title: '资讯信息' },
         component: () => import('@/views/aaa2')
       }
     ]

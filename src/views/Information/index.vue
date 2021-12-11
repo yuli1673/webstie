@@ -1,7 +1,7 @@
 <!--
  * @Author: yu li
  * @Date: 2021-12-11 12:18:27
- * @LastEditTime: 2021-12-11 14:11:37
+ * @LastEditTime: 2021-12-11 19:41:01
  * @LastEditors: yu li
  * @FilePath: /website/src/views/Information/index.vue
  * @Description: 最新资讯
@@ -15,22 +15,22 @@
         <!-- 轮播图 -->
         <el-carousel class="carousel-container">
           <el-carousel-item
-            class="carousel-item"
             v-for="carousel in carousels"
             :key="carousel.id"
+            class="carousel-item"
           >
             <h3 class="carousel-title">{{ carousel.title }}</h3>
-            <img class="carousel-img" :src="carousel.imgSrc" alt="advertise" />
+            <img class="carousel-img" :src="carousel.imgSrc" alt="advertise">
           </el-carousel-item>
         </el-carousel>
         <!-- 右侧头条 -->
         <ul class="top-new">
-          <li class="item_new" v-for="topNew in topNews" :key="topNew.id">
+          <li v-for="topNew in topNews" :key="topNew.id" class="item_new">
             <img
               class="item_new-img"
               :src="topNew.imgSrc"
               :alt="topNew.title"
-            />
+            >
             <div class="content">
               <h5 class="item_new-title">{{ topNew.title }}</h5>
               <p class="item_new-createAt">{{ topNew.createAt }}</p>
@@ -41,7 +41,7 @@
       <!-- 资讯 -->
       <div class="info">
         <h1 class="info_logo">
-          <i class="el-icon-basketball"></i>
+          <i class="el-icon-basketball" />
           资讯
         </h1>
         <!-- 滚动显示 历史资讯 -->
@@ -51,7 +51,7 @@
             :key="index"
             class="info_history-item"
           >
-            {{ i }}
+            资讯内容。。。{{ i }}
           </li>
         </ul>
       </div>
@@ -61,7 +61,7 @@
 </template>
 
 <script>
-import config from "./config";
+import config from './config'
 export default {
   data() {
     return {
@@ -69,15 +69,15 @@ export default {
       // 轮播图
       carousels: config.carousels,
       // 头条信息
-      topNews: config.topNews,
-    };
+      topNews: config.topNews
+    }
   },
   methods: {
     load() {
-      this.count += 2;
-    },
-  },
-};
+      this.count += 2
+    }
+  }
+}
 </script>
 
 <style lang="stylus" scoped>
