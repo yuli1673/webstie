@@ -1,10 +1,10 @@
 <!--
- * @Author: josen
+ * @Author: yu li
  * @Date: 2021-02-12 18:39:57
- * @LastEditTime: 2021-12-09 23:10:57
+ * @LastEditTime: 2021-12-11 12:22:52
  * @LastEditors: yu li
  * @Description: 主体导航路由
- * @FilePath: /official-website/src/components/TheRouter.vue
+ * @FilePath: /website/src/components/TheRouter.vue
 -->
 
 <template>

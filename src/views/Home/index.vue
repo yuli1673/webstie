@@ -1,9 +1,9 @@
 <!--
  * @Author: yu li
  * @Date: 2021-12-09 22:30:52
- * @LastEditTime: 2021-12-10 22:14:49
+ * @LastEditTime: 2021-12-11 12:29:43
  * @LastEditors: yu li
- * @FilePath: /official-website/src/views/Home/index.vue
+ * @FilePath: /website/src/views/Home/index.vue
  * @Description: 首页
  * @ReadMe: 产考资料，学习文献等...
 -->
@@ -55,7 +55,7 @@ export default {
 .home
   .carousel
     >>> .el-carousel__container
-      height 100vh
+      height calc(100vh - 60px)
       width 100vw
       .carousel-item
         width 100%

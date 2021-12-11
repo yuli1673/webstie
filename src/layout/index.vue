@@ -1,15 +1,14 @@
 <!--
  * @Author: yu li
  * @Date: 2021-12-09 23:09:33
- * @LastEditTime: 2021-12-10 00:09:29
+ * @LastEditTime: 2021-12-11 11:38:57
  * @LastEditors: yu li
- * @FilePath: /official-website/src/layout/index.vue
+ * @FilePath: /website/src/layout/index.vue
  * @Description: 布局文件
  * @ReadMe: 产考资料，学习文献等...
 -->
 <template>
   <div class="layout">
-    <div></div>
     <the-header />
     <!-- 子路由 主体 -->
     <div class="container">
@@ -27,5 +26,7 @@ export default {
 };
 </script>
 <style lang="stylus" scoped>
-// .layout
+.layout
+  .container
+    margin-top: 60px
 </style>
